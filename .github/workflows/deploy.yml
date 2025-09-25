@@ -20,7 +20,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         script: |
           APP_DIR=~/app
-          REPO_URL=https://github.com/Onyeneke-AC/two-tier-app.git
+          REPO_URL=https://github.com/brianxyz3/frontend-tesa-fullstack-lab.git
           BUILD_DIR=$APP_DIR/build
           APACHE_DIR=/var/www/html
 
@@ -44,6 +44,7 @@ jobs:
 
           # Go to app directory (create if missing)
           mkdir -p $APP_DIR
+          rm -rf $APP_DIR/*
           cd $APP_DIR
 
           # Pull latest code
